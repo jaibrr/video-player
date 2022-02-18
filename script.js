@@ -1,4 +1,5 @@
-let video = document.getElementById("video1");
+let video = document.getElementById("video")
+let video = document.querySelector("video")
 
 function back(){
     video.currentTime -= 2
@@ -8,47 +9,25 @@ function forward(){
     video.currentTime += 2
 }
 
-
-function dowvvel(){
-    video.playbackRate -= 0.1
-}
-
-function upvel(){
-    video.playbackRate += 0.1
-}
-
-
 function play(){
     video.play()
 }
 
 function pause(){
     video.pause()
-    video.currentTime = o
+    video.currentTime = 0
 }
 
-/* function onOver(elemento){
-    elemento.style.display = ""
+
+// controle
+let controle = document.getElementById("div.controle");
+
+function apareceControle(){
+    controle.style.visibility = "visible";
+    console.log("Apareceu");
 }
 
-function onOut(elemento){
-    elemento.style.display = "none"
-} */
-
-/* let image = document.getElementById("like")
-
-image.addEventListener("click", function(){
-
-    if (image.src = "./img/thumbs-up.png"){
-        image.setAttribute("src", "./img/thumbs-down.png")
-        image.setAttribute("width", "100px")
-        image.setAttribute("heigh", "100px")
-    } 
-    
-    if (image.src = "./img/thumbs-down.png"){
-        image.setAttribute("src", "./img/thumbs-up.png")
-        image.setAttribute("width", "100px")
-        image.setAttribute("heigh", "100px")
-    }
-
-}) */
+function desapareceControle(){
+    controle.style.visibility = "hidden";
+    console.log("Desapareceu");
+}
