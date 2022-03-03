@@ -1,4 +1,5 @@
 let video = document.getElementById("video1")
+let controles = document.getElementById("controle")
 
 function back(){
     video.currentTime -= 2
@@ -26,14 +27,9 @@ function fullscreen(){
     video.requestFullscreen()
 }
 
-let controles = document.querySelector("controle")
-
-function showDisplay(){
-
-    controles.style.opacity = "1";
-    controles.style.transition = "1s"
+function showControl(){
+    controle.style.display = "block"
 }
-
-function hideDisplay(){
-    controles.style.opacity = "0";
+function hideControl(){
+    controle.style.display = "none"
 }
