@@ -1,5 +1,4 @@
-let video = document.getElementById("video")
-let video = document.querySelector("video")
+let video = document.getElementById("video1")
 
 function back(){
     video.currentTime -= 2
@@ -15,19 +14,26 @@ function play(){
 
 function pause(){
     video.pause()
+}
+
+
+function stop(){
+    video.pause()
     video.currentTime = 0
 }
 
-
-// controle
-let controle = document.getElementById("div.controle");
-
-function apareceControle(){
-    controle.style.visibility = "visible";
-    console.log("Apareceu");
+function fullscreen(){
+    video.requestFullscreen()
 }
 
-function desapareceControle(){
-    controle.style.visibility = "hidden";
-    console.log("Desapareceu");
+let controles = document.querySelector("controle")
+
+function showDisplay(){
+
+    controles.style.opacity = "1";
+    controles.style.transition = "1s"
+}
+
+function hideDisplay(){
+    controles.style.opacity = "0";
 }
